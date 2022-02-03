@@ -1,5 +1,4 @@
 .DS_Store
-.gitattributes
 data/*
 __pycache__/
 z*
