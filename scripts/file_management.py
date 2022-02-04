@@ -87,7 +87,7 @@ def download_files_from_url(urls, destination_directory, mode='gdrive'):
     return dir_list
 
 
-def save_dfs_to_csv(dfs, destination_directory, prefix='', overwrite=True):
+def save_dfs_to_csv(dfs, destination_directory, prefix=''):
     """
     Gets an array of DataFrames 'dfs' and stores them in the given 'destination_directory'.
     The 'dfs' list is a list of dictionaries with 2 mandatory keys: 'filename' (as per the file name)
@@ -119,9 +119,8 @@ def save_dfs_to_csv(dfs, destination_directory, prefix='', overwrite=True):
             print(file_path, "doesn't exist. Creating new file")
         else:
             print(df_name, "file already exists in", destination_directory)
-            if overwrite:
-                print("Overwriting file")
-                df_data.to_csv(file_path)
+            print("Overwriting file")
+        df_data.to_csv(file_path)
 
         dir_list.append(file_path)
     return dir_list
