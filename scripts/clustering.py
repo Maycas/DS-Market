@@ -33,7 +33,7 @@ def kmeans_elbow_plot(X, k_range):
     fig.show()
 
 
-def get_each_cluster(df, model):
+def get_clusters(df, model):
     """
     From a given dataframe 'df' and a clustering 'model'
     it trains and returns a numpy array containing the clusters where
